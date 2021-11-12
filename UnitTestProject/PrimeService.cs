@@ -14,6 +14,10 @@ namespace UnitTestProject
 			{
 				return false;
 			}
+			else if(candidate == 3)
+			{
+				return false;
+			}
 			throw new NotImplementedException("Please create a test first");
 		}
 	}
