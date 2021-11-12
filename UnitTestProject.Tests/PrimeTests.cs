@@ -1,14 +1,13 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
-using UnitTestProject;
 
-namespace UnitTestProjectTests
+namespace UnitTestProject.Tests
 {
 	[TestClass]
-	public class PrimeTests
+	public class PrimeServiceTests
 	{
         private readonly PrimeService _primeService;
 
-        public PrimeTests()
+        public PrimeServiceTests()
         {
             _primeService = new PrimeService();
         }
@@ -21,7 +20,6 @@ namespace UnitTestProjectTests
             Assert.IsFalse(result, $"1 should not be prime");
         }
 
-        #region Sample_TestCode
         [DataTestMethod]
         [DataRow(-1)]
         [DataRow(0)]
@@ -32,6 +30,5 @@ namespace UnitTestProjectTests
 
             Assert.IsFalse(result, $"{value} should not be prime");
         }
-        #endregion
     }
 }
